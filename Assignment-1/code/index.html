@@ -14,7 +14,20 @@
     <div id="root"></div>
     <script type="text/babel">
 //React Code here
- ReactDOM.render(<div></div>,document.getElementById('root'));
+      var reactElement=React.createElement('div',{class:"parentBlock"},
+          React.createElement('div',{class:"firstBlock"},
+            React.createElement('div',{class:'first'}),
+            React.createElement('div',{class:'second'})),
+          React.createElement('div',{class:"secondBlock"}),
+          React.createElement('div',{class:"thirdBlock"},
+            React.createElement('div',{class:"tfirst"}),
+            React.createElement('div',{class:"tsecond"}),
+            React.createElement('div',{class:"tthird"})),
+          
+      
+      null,null);
+      // console.log(className);
+  ReactDOM.render(reactElement,document.getElementById('root'));
 
 </script>
 <!--

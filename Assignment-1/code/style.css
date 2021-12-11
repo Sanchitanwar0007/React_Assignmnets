@@ -1,1 +1,106 @@
+#root{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.parentBlock{
+    display:flex;
+    margin-top:100px;
+    flex-direction: column;
+    
+}
+.firstBlock{
+    display:flex;
+    flex-direction:row;
+  }
+  .first,.second{
+    background-color:#FFC83F;
+}
+.secondBlock{
+    background-color:#FF3B69;
+}
+.thirdBlock{
+    display:flex;
+}
+.tfirst, .tsecond, .tthird{   
+    background-color:#6F7EFF;
+}
+@media only screen and (min-width:769px){
+    .firstBlock{
+        flex-direction:row;
+      }
+    
+    .first,.second{
+        height:110px;
+        width:200px;
+    }
+    .second{
+        margin-left:10px;
+    }
+    .secondBlock{
+        height:140px;
+        width:410px;
+        margin-top:10px;
+    }
+    .thirdBlock{
+        flex-direction:row;
+    }
+    .tfirst, .tsecond, .tthird{
+        height:130px;
+        width:130px;
+        margin-top:10px;
+    }
+    .tsecond,.tthird{
+        margin-left:10px;
+    }
+}
+@media(min-width:321px) and (max-width:768px){
+    .firstBlock{
+        flex-direction:row;
+      }
+    
+    .first,.second{
+        height:110px;
+        width:155px;
+    }
+    .second{
+        margin-left:10px;
+    }
+    .secondBlock{
+        height:70px;
+        width:320px;
+        margin-top:10px;
+    }
+    .thirdBlock{
+        flex-direction:column;
+    }
+    .tfirst, .tsecond, .tthird{
+        height:30px;
+        width:320px;
+        margin-top:10px;
+    }
+}
+@media(max-width:320px){
+    .firstBlock{
+        flex-direction:column;
+    }
+    .first,.second{
+        height:30px;
+        width:150px;
+        margin-top:5px;
 
+    }
+    .secondBlock{
+        height:70px;
+        width:150px;
+        margin-top:5px;
+    }
+    .thirdBlock{
+        flex-direction:column;
+    }
+    .tfirst, .tsecond, .tthird{
+        height:30px;
+        width:150px;
+        margin-top:5px;
+    }
+}
