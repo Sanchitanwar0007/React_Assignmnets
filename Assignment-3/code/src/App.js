@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import data from './Data'
 
-
-var arrow="<"
 function App() {
   return (
     <div className="site-container">
-    {/* Start Your code here */}
+      <div className="Top">
+        <p>{data.Name}</p>
+        <p>{data.Id}</p>
+      </div>
     </div>
   );
 }
