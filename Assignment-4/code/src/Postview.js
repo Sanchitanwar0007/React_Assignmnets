@@ -22,12 +22,12 @@ const Postview = () => {
             <img src={Camera} alt="insta-icon" className="camera-image" />
           </div>
         </div>
-        <div>
+        
           {data.map((val, i) => {
             return (
               <>
-                <div className="main">
-                  <div key={i} className="post">
+                <div className="main" key={i}>
+                  <div className="post">
                     <div className="post-top">
                       <h4 className="name">{val.name}</h4>
                       <p className="location">{val.location}</p>
@@ -48,15 +48,15 @@ const Postview = () => {
                   <div>
                     <div className="post-bottom">
                       <div>
-                        <i class="far fa-heart"></i>
-                        <i class="fab fa-telegram-plane"></i>
+                        <i className="far fa-heart"></i>
+                        <i className="fab fa-telegram-plane"></i>
                       </div>
                       <div>
                         <p className="date"> {val.Date}</p>
                       </div>
                     </div>
                     <div>
-                      <p class="like">{val.likes} likes</p>
+                      <p className="like">{val.likes} likes</p>
                       <p className="des">{val.description}</p>
                     </div>
                   </div>
@@ -65,7 +65,6 @@ const Postview = () => {
             );
           })}
         </div>
-      </div>
     </>
   );
 };
