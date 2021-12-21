@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Postview.css";
 import Camera from "./images/Camera.svg";
 import Intagram from "./images/Instagram.svg";
-
+let count=0;
+let countm=0;
 const Postview = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -10,6 +11,29 @@ const Postview = () => {
       .then((request) => request.json())
       .then((response) => setData(response));
   }, []);
+  
+  let [colors,setColor]=useState("black");
+  let [colorm,setColorm]=useState("black");
+  const click=()=>{
+    if(count%2===0){
+      count+=1
+      setColor("black");
+    }else{
+      setColor("red");
+      count+=1
+    }
+   
+   console.log(count)
+  }
+  const click2=()=>{
+    if(countm%2===0){
+      countm+=1
+      setColorm("black");
+    }else{
+      setColorm("#34eb52");
+      countm+=1
+    }
+  }
   return (
     <>
       <div className="site-container">
@@ -24,8 +48,10 @@ const Postview = () => {
         </div>
         
           {data.map((val, i) => {
+            // debugger
             return (
               <>
+              
                 <div className="main" key={i}>
                   <div className="post">
                     <div className="post-top">
@@ -48,8 +74,8 @@ const Postview = () => {
                   <div>
                     <div className="post-bottom">
                       <div>
-                        <i className="far fa-heart"></i>
-                        <i className="fab fa-telegram-plane"></i>
+                        <i className="far fa-heart" style={{color:colors}} onClick={click}></i>
+                        <i className="fab fa-telegram-plane" style={{color:colorm}} onClick={click2}></i>
                       </div>
                       <div>
                         <p className="date"> {val.Date}</p>
