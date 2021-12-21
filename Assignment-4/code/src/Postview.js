@@ -57,7 +57,7 @@ const Postview = () => {
                     </div>
                     <div>
                       <p className="like">{val.likes} likes</p>
-                      <p className="des">{val.description}</p>
+                      <p className="des"><strong>{val.description}</strong></p>
                     </div>
                   </div>
                 </div>
